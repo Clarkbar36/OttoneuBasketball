@@ -24,4 +24,4 @@ while (i <= len(sched.index)):
 
 final_schedule = pd.concat(new_schedule)
 
-final_schedule.to_csv('C:/Users/aclark5/PycharmProjects/OttoneuBasketball/final_schedule.csv', index=False)
+#final_schedule.to_csv('C:/Users/aclark5/PycharmProjects/OttoneuBasketball/final_schedule.csv', index=False)
