@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-lgID = '40'
-tmID = '220'
+lgID = '20'
+tmID = '81'
 
 ottoneu_tbl = pd.read_html("https://ottoneu.fangraphs.com/basketball/%s/lineup/%s" % (lgID, tmID))[0]
 ottoneu_tbl = ottoneu_tbl[ottoneu_tbl.Name != "-"]
