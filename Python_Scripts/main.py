@@ -18,5 +18,5 @@ for  player in roster:
             gameCard.append(fppg)
             gameCard.append(date)
 
-            weeklyDeck.append(gameCard)
-            gameCard.clear()
+            weeklyDeck.append(gameCard)     #will become list of all games per player
+            gameCard.clear()                #empty gameCard so that we can rebuild with next player /date
