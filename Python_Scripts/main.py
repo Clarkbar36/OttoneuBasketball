@@ -12,4 +12,11 @@ for  player in roster:
     # get a list of dates according to player team  ** ALEX **
     #for each date in schedule where TEAM = 'BOS'
         #if date > weekStart and date < weekEnd
-    test = 0
+            gameCard.append(playerName)
+            gameCard.append(playerTeam)
+            gameCard.append(playerPos)
+            gameCard.append(fppg)
+            gameCard.append(date)
+
+            weeklyDeck.append(gameCard)
+            gameCard.clear()
