@@ -1,6 +1,7 @@
 import pandas as pd
+import datetime
 
-schedule = pd.read_csv('2021-22 NBA Schedule.csv')
+schedule = pd.read_csv('reference_files/2021-22 NBA Schedule.csv')
 
 scheduleT = schedule.transpose()
 scheduleT.columns = scheduleT.iloc[0]
@@ -14,7 +15,6 @@ new_columns = [f'Gm {i}' for i in range(1, 83)]
 new_schedule = []
 i = 1
 while (i <= len(sched.index)):
-    print(i)
     test = sched.iloc[[i-1]]
     test1 = test.loc[:, (test != 0).any(axis=0)]
     test1.columns = new_columns
@@ -23,5 +23,8 @@ while (i <= len(sched.index)):
     i += 1
 
 final_schedule = pd.concat(new_schedule)
+final_schedule = final_schedule.transpose()
+final_schedule.columns = final_schedule.iloc[0]
+final_schedule.drop(index=final_schedule.index[0], axis=0, inplace=True)
 
-#final_schedule.to_csv('C:/Users/aclark5/PycharmProjects/OttoneuBasketball/final_schedule.csv', index=False)
+final_schedule.to_csv('Static_Files/final_schedule.csv', index=False)
