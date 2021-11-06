@@ -34,4 +34,4 @@ user_tmID = '81'
 
 roster = pull_roster(user_lgID, user_tmID)
 
-#ottoneu_tbl.to_csv('Static_Files/test_team.csv', index=False)
+roster.to_csv('Static_Files/test_team.csv', index=False)

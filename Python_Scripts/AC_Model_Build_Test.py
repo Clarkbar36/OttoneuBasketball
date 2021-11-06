@@ -32,9 +32,16 @@ all_cards = roster_to_join.merge(all_weeks_games, on='team', how='right')
 
 all_cards = all_cards.sort_values(by=['player', 'gm_dt'])
 
+all_cards['count'] = all_cards.groupby(['player']).cumcount()+1
+
+#all_cards = all_cards.reset_index(drop = True)
+
+all_cards = all_cards.set_index(['player', 'count'])
 
 ## Begin object work below
 
+test = all_cards.T.to_dict()
+test['Bam Adebayo', 1]
 
 player_deck = all_cards.values.tolist()
 gm_date = player_deck[0][5]
