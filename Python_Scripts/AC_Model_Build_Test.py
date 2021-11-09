@@ -4,7 +4,7 @@ pd.options.mode.chained_assignment = None
 
 date_cols = ['ATL', 'BKN', 'BOS', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 'HOU', 'IND', 'LAC', 'LAL', 'MEM',
              'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
-schedule = pd.read_csv('Static_Files/final_schedule.csv', parse_dates=date_cols)
+schedule = pd.read_csv('Static_Files/nba_schedule.csv', parse_dates=date_cols)
 roster = pd.read_csv('Static_Files/test_team.csv')
 
 # need to formulate this
@@ -40,8 +40,6 @@ all_cards = all_cards.set_index(['player', 'count'])
 
 ## Begin object work below
 
-test = all_cards.T.to_dict()
-test['Bam Adebayo', 1]
 
 player_deck = all_cards.values.tolist()
 gm_date = player_deck[0][5]
