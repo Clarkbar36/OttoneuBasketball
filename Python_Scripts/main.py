@@ -1,9 +1,9 @@
-import AC_Model_Build_Test as ac
-import Model_Build_Testing as mod
+import CR_Model_Build_Test as ac
 playerDeck = ac.player_deck
 print(playerDeck)
 
-mod.weeklyDeck
+for players in playerDeck:
+    print(players)
 # # for players in weeklyDeck:
 # #     print(weeklyDeck[count])
 # #     count+=1
