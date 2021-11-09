@@ -4,8 +4,8 @@ pd.options.mode.chained_assignment = None
 
 date_cols = ['ATL', 'BKN', 'BOS', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 'HOU', 'IND', 'LAC', 'LAL', 'MEM',
              'MIA', 'MIL', 'MIN', 'NOP', 'NYK', 'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
-schedule = pd.read_csv('Static_Files/nba_schedule.csv', parse_dates=date_cols)
-roster = pd.read_csv('Static_Files/test_team.csv')
+schedule = pd.read_csv('../Static_Files/nba_schedule.csv', parse_dates=date_cols)
+roster = pd.read_csv('../Static_Files/test_team.csv')
 
 # need to formulate this
 weekStart = datetime.datetime(2021, 11, 1)  # '11/1/2021'

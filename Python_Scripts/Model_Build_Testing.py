@@ -1,7 +1,7 @@
 import pandas as pd
 
-schedule = pd.read_csv('Static_Files/nba_schedule.csv')
-roster = pd.read_csv('Static_Files/test_team.csv')
+schedule = pd.read_csv('../Static_Files/nba_schedule.csv')
+roster = pd.read_csv('../Static_Files/test_team.csv')
 
 # need to build gameCard class?  IGNORE
 gameCard = []
