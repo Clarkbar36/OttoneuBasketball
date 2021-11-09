@@ -44,8 +44,9 @@ for players in cr.player_deck:
     pMin = cr.player_deck[pcount][4]
     pFppg = cr.player_deck[pcount][5]
     pGmDate = cr.player_deck[pcount][6]
+    gm_date2 = pGmDate.strftime("%m/%d/%y")
 
-    button_1 = tk.Button(frame_buttons, text=f"{pName}\n{pPos}\n{pTeam}\n{pInjured}\n{pMin}\n{pFppg}\n{pGmDate}\n")
+    button_1 = tk.Button(frame_buttons, text=f"{pName}\n{pPos}\n{pTeam}\n{pInjured}\n{pMin}\n{pFppg}\n{gm_date2}\n")
 
     if pName == prevName:
         colCount += 1
