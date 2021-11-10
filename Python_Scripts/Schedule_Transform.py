@@ -27,5 +27,5 @@ final_schedule = final_schedule.transpose()
 final_schedule.columns = final_schedule.iloc[0]
 final_schedule.drop(index=final_schedule.index[0], axis=0, inplace=True)
 
-final_schedule.to_csv('../Static_Files/nba_schedule.csv', index=False)
-final_schedule.to_csv('../Static_Files/nba_schedule2.csv', index=False)
+#final_schedule.to_csv('../Static_Files/nba_schedule.csv', index=False)
+
